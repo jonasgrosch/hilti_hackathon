@@ -53,7 +53,7 @@ export default function MyApp() {
   }
 
   function onPredict() {
-    fetch('http://192.168.1.202:4700/predict', {
+    fetch('http://192.168.1.202:4800/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ export default function MyApp() {
       page: selectedPage,
       labels: extractedRows.map((row) => ({ text: row.description, count: row.count })),
     };
-    fetch('http://192.168.1.202:4700/add_sample', {
+    fetch('http://192.168.1.202:4800/add_sample', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
